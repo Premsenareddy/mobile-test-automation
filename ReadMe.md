@@ -1,121 +1,213 @@
-### PROJECT TITLE 
-APPIUM ANDROID TESTING ON AHB APPLICATION 
-
-#### NAME:- AHBMobileAppium
-
-### PROJECT DESCRIPTION
-The project is based on testing AHB app using Appium that consist of multiple journey's.
+⭐ Mobile Test Automation Framework
+Enterprise-grade Mobile Automation (Android/iOS) using Java, Appium, TestNG, Maven & BDD
 
 
-### USED TOOLS AND FRAMEWORKS
-1.Appium
-
-2.Maven repository
-
-3.TestNG
-
-4.Cucumber
-
-5.Emulator
 
 
-##### Prerequisites
-
-Different ways to run this project.
-
-```
-1.Command Prompt
-2.Eclipse
-3.Batch File
-```
-
-### GETTING STARTED to mobile automation to feature
-
-##### To run all the test cases
-
-**Option A: Import your project into Eclipse (recommended) **
-
-In Eclipse, go to the File menu and choose:
 
 
-   - File -> Import... -> Existing Maven Projects into Workspace
-  
-   - Select the directory containing this file.
-  
-   - Click Finish.
- 
-
-You can now browse the project in Eclipse.
-
-   - Now, right click on the project and go to the Run As
-   
-   - Click maven clean and then maven install
-
-**Option B: Import your project into Command Prompt **
-
-In command prompt, go to the path where the project is located
-
-   - enter maven clean
-   
-   - enter maven install
-   
-**Option C: Open the .bat file **
- 
-###NOTE
-
-To Run the project using user emulator , then change the following capabilities accordingly:-.
-
-**Steps**
 
 
-```
-Step 1.Go to the src/test/resources source folder
-Step 2.Open the properties/congif.properties
-Step 3.Change the desired capabilities accordingly
-Step 4.Save it.
-```
-
-### src/main/java DESCRIPTION
-
-**com.appium.base**- Define the base class that includes the waits and files and appium server connection
-
-**com.appium.screens**- Defines the Page Object model of different screens.
-
-**com.appium.utils**-  Define the actions required to run the test cases.
 
 
-### src/main/resources DESCRIPTION
-
-**log4j.properties**- log4j file to run logs.
-
-### src/test/java DESCRIPTION
-
-**com.appium.features**- Define all the features files i.e Onboarding, Marketplace, Save, Spend & Pay and Kids
-
-**com.appium.runner**- Define the class required to run the test using TestNg
-
-**com.appium.stepDefinitions**- Defines all the methods required to run the feature files.
-
-### src/resources/java DESCRIPTION
-
-**properties**- It provides the data and will help to change any input. To change desired capabilities go to config.properties
-
-**App**- It consist of AHB APP apk..
 
 
-### REPORTS FOLDER
-
-Generate the extent reports for all the test cases including screenshots if scenario gets failed.
-
-### LOG FOLDER
-
-Stores all the logs
-
-### RunProject Batch File
-
-Use this to run the project through .bat file
 
 
-#### AUTHOR NAME
 
-Shekhar Kapil
+
+A modular, scalable Mobile Test Automation Framework designed for modern enterprise apps. Supports Android & iOS, built with Appium, Java 17, Maven, TestNG, Cucumber BDD, Extent reporting, and parallel execution.
+
+This repository demonstrates:
+
+Clean automation architecture (POM + Driver Factory)
+
+BDD + TestNG hybrid automation
+
+Multi-environment test execution
+
+API utility for backend validations
+
+Cloud execution (PCloudy-ready)
+
+Highly reusable screen objects
+
+CI/CD-friendly structure
+
+📁 Project Structure
+mobile-test-automation
+│
+├── pom.xml                          # Maven project config
+├── testng.xml                       # TestNG execution suite
+├── .gitignore
+│
+├── src
+│   ├── main
+│   │   ├── java/com/appium
+│   │   │   ├── base/               # BaseClass, AppiumServer handling
+│   │   │   ├── driver/             # DriverManager, Factory, PCloudy support
+│   │   │   ├── screens/            # Page Objects (Android/iOS)
+│   │   │   ├── utils/              # CommonUtils, WaitUtil, Json, PropertyUtil
+│   │   │   └── exception/          # Custom exceptions
+│   │   └── resources               # Log4j, configs
+│   │
+│   └── test
+│       ├── java/com/appium
+│       │   ├── features/           # Cucumber Feature Files (BDD Scenarios)
+│       │   ├── stepDefinitions/    # Step definitions
+│       │   ├── runner/             # TestRunner (Cucumber + TestNG)
+│       │   └── hooks/              # Test hooks
+│       │
+│       └── resources
+│           ├── testData/           # JSON test data
+│           ├── properties/         # dev/sit configs
+│           └── extent.properties   # Reporting config
+│
+├── scripts/maven-test.sh           # CLI execution helper
+├── .buildkite/pipeline.yaml        # CI pipeline (optional)
+└── ReadMe.md
+
+🏗 High-Level Architecture
+                +-------------------------------------+
+                |             Test Runner              |
+                |     (TestNG + Cucumber BDD)          |
+                +-----------------+--------------------+
+                                  |
+                +-----------------+--------------------+
+                |           Step Definitions           |
+                | (BDD layer mapping feature → logic)  |
+                +-----------------+--------------------+
+                                  |
+                +-----------------+--------------------+
+                |     Page Object Model (Screens)      |
+                |   (UI interactions, gestures, waits) |
+                +-----------------+--------------------+
+                                  |
+                +-----------------+--------------------+
+                |     Driver Factory / Appium Setup    |
+                |  Local / Cloud / PCloudy Execution   |
+                +-----------------+--------------------+
+                                  |
+                +-----------------+--------------------+
+                |  Application Under Test (Android/iOS) |
+                +---------------------------------------+
+
+🚀 Running Tests
+1️⃣ Install dependencies
+mvn clean install -DskipTests
+
+2️⃣ Execute full test suite
+mvn test
+
+3️⃣ Run specific TestNG suite
+mvn test -DsuiteXmlFile=testng.xml
+
+4️⃣ Run Cucumber feature
+mvn test -Dcucumber.filter.tags="@smoke"
+
+5️⃣ Parallel execution
+
+Enabled via TestNG XML + thread configs:
+
+mvn test -Dthread.count=5
+
+📱 Mobile Execution (Appium)
+
+Ensure Appium server is running:
+
+appium
+
+
+Update device capabilities in:
+
+src/test/resources/properties/config_dev.properties
+src/test/resources/properties/config_sit.properties
+
+🌐 API Testing Support
+
+A built-in API utility (RestUtil) supports:
+
+GET/POST/PUT/PATCH requests
+
+JSON payload builders
+
+Header management
+
+Backend validation during end-to-end flows
+
+Useful for hybrid UI + API test journeys.
+
+📊 Reporting
+✔ Extent Reports
+
+Auto-generated HTML reports in:
+
+/Report/
+
+✔ Screenshots on failure
+
+Captured automatically in:
+
+/log/ or /screenshots/
+
+🤖 CI/CD Integration
+Buildkite pipeline ready
+
+.buildkite/pipeline.yaml
+
+Add this step:
+
+steps:
+  - label: "Run Mobile Regression"
+    command: mvn test
+    agents:
+      queue: default
+
+
+Also compatible with:
+
+GitHub Actions
+
+Jenkins
+
+Azure DevOps
+
+GitLab CI
+
+🛠 Tech Stack Summary
+Category	Tools
+Language	Java 17
+Test Runner	TestNG
+BDD	Cucumber
+Mobile Automation	Appium
+API Testing	RestUtil
+Build Tool	Maven
+Reporting	ExtentReports
+Cloud Execution	PCloudy
+Architecture	POM + Driver Factory
+CI/CD	Buildkite / GitHub Actions ready
+🎯 Purpose of This Framework
+
+This repository demonstrates:
+
+Senior-level mobile automation engineering
+
+End-to-end feature coverage of real banking flows
+
+BDD + POM patterns for maintainable automation
+
+Cloud-device execution readiness
+
+Integration of UI + API validations
+
+Industry-standard architecture for enterprise QA teams
+
+Ideal for interviews, portfolio demonstration, and real-world mobile automation.
+
+📬 Contact
+
+Premsena Reddy Anumandla
+Senior QA Automation Engineer
+
+📌 GitHub: @Premsenareddy
+📌 LinkedIn: https://www.linkedin.com/in/premsena-anumandla-a802b4179/
