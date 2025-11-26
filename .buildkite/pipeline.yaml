@@ -1,0 +1,13 @@
+env:
+  APP_BUILD_QUEUE: "alpha-agent-macstadium"
+  CICD_SCRIPTS_VERSION: "v15-0-0"
+  K8S_BUILD_QUEUE: "alpha-agent-macstadium"
+steps:
+  - label: ":package: TestCases"
+    branches: improvement/** bugfix/** feature/** spike/** develop nft main
+    command:
+      - "scripts/maven-test.sh ${MAVEN_TEST_BRANCH}"
+      - "echo 'task completed'"
+    timeout_in_minutes: 60
+    agents:
+      queue: "${APP_BUILD_QUEUE}"

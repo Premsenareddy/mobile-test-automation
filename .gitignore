@@ -1,0 +1,44 @@
+# --- Build & IDE files ---
+/target/
+/build/
+/out/
+
+# IntelliJ / Eclipse / VSCode
+/.idea/
+/*.iml
+/.project
+/.classpath
+/.settings/
+/.vscode/
+
+# --- Operating System files ---
+.DS_Store
+Thumbs.db
+
+# --- Logs & Reports ---
+/log/
+/logs/
+/Report/
+/reports/
+/junit_xml/
+/log4j-application.log
+/Extent_Test_report.html
+
+# --- Test Output ---
+/test-output/
+/test-output.xml
+
+# --- Platform Specific / Temporary Files ---
+/.metadata
+/tmp/
+/*.tmp
+
+# --- Mobile Automation Files ---
+/src/test/resources/iOS/
+AHB-MobileAutomation.iml
+
+# --- Zip or large binary files ---
+*.zip
+*.apk
+*.ipa
+

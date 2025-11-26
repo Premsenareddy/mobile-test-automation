@@ -1,0 +1,104 @@
+{
+  "__Test Case__@kidsOtp__1" : "KidsOtp - [SC01] Verify if the parent has the option to set the mobile number for a child whose EID status is VALID",
+  "__Test Case__@kidsOtp__2" : "KidsOtp - [SC02] Verify the elements on Receive OTP Overlay screen",
+  "__Test Case__@kidsOtp__3" : "KidsOtp - [SC03] Verify if error message is displayed by entering invalid mobile number in Receive OTP Overlay screen",
+  "__Test Case__@kidsOtp__4" : "KidsOtp - [SC04] Verify if the mobile number duplication error is displayed by entering an existing number for the child",
+  "__Test Case__@kidsOtp__5" : "KidsOtp - [SC05] Verify the elements on Confirm OTP Overlay screen",
+  "kidsOtp.SC.mobileNumber" : "501921246",
+  "kidsOtp.SC.passcode" : "1234",
+  "kidsOtp.SC.debitPin" : "4321",
+
+  "__Test Case__@kidsOtp__6[Replace/Reset]" : "KidsOtp - [SC06] Verify if the parent is able to set the mobile number for a child whose EID status is VALID",
+  "kidsOtp.SC06.mobileNumber" : "501921247",
+  "kidsOtp.SC06.passcode" : "1234",
+  "kidsOtp.SC06.debitPin" : "4321",
+
+  "__Test Case__@kidsOtp__7" : "KidsOtp - [SC07] Verify if the parent does not have option to set the mobile number for a child whose EID status is not VALID",
+  "kidsOtp.SC07.mobileNumber" : "501921248",
+  "kidsOtp.SC07.passcode" : "1234",
+  "kidsOtp.SC07.debitPin" : "4321",
+
+  "__Test Case__@kidsOtp__8" : "KidsOtp - [SC08] Verify if the parent is able to edit the mobile number for a child whose EID status is VALID",
+  "kidsOtp.SC08.mobileNumber" : "501921247",
+  "kidsOtp.SC08.passcode" : "1234",
+  "kidsOtp.SC08.debitPin" : "4321",
+
+  "__Test Case__@kidsDocuments__1" : "kidsDocuments - [SC01] Verify if expected documents for child can be viewed by the Father in case child's debit card is delivered",
+  "kidsDocuments.SC01.mobileNumber" : "501921245",
+  "kidsDocuments.SC01.passcode" : "1234",
+  "kidsDocuments.SC01.debitPin" : "4321",
+  "kidsDocuments.SC01.childName" : "Banking Child",
+
+  "__Test Case__@kidsDocuments__2" : "kidsDocuments - [SC02] Verify if documents section is not present for child in case my child's debit card is not delivered",
+  "kidsDocuments.SC02.mobileNumber" : "501921245",
+  "kidsDocuments.SC02.passcode" : "1234",
+  "kidsDocuments.SC02.debitPin" : "4321",
+  "kidsDocuments.SC02.childName" : "Banking Nocard",
+
+  "__Test Case__@kidsDocuments__3" : "kidsDocuments - [SC03] Verify if documents section is not present for child in case my child is a marketplace user",
+  "kidsDocuments.SC03.mobileNumber" : "501921245",
+  "kidsDocuments.SC03.passcode" : "1234",
+  "kidsDocuments.SC03.debitPin" : "4321",
+  "kidsDocuments.SC03.childName" : "Marketplace Child",
+
+  "__Test Case__@kidsDocuments__4,5" : "kidsDocuments - [SC04] Verify if expected documents for child can be viewed by the Mother in case child's debit card is delivered",
+  "kidsDocuments.SC04.mobileNumber" : "501921244",
+  "kidsDocuments.SC04.passcode" : "1234",
+  "kidsDocuments.SC04.debitPin" : "4321",
+  "kidsDocuments.SC04.childName" : "Banking Child",
+
+  "__Test Case__@kidsDocuments__5,4" : "kidsDocuments - [SC05] Verify if option to open or download documents for child appears by tapping on each documents",
+  "kidsDocuments.SC05.mobileNumber" : "501921244",
+  "kidsDocuments.SC05.passcode" : "1234",
+  "kidsDocuments.SC05.debitPin" : "4321",
+  "kidsDocuments.SC05.childName" : "Banking Child",
+
+  "__Test Case__@kycUpdate__1" : "kycUpdate - [SC01] Verify if Emirates ID details and update option is present in Profile details screen for a user whose EID status is Valid",
+  "kycUpdate.SC01.mobileNumber" : "501921232",
+  "kycUpdate.SC01.passcode" : "1234",
+  "kycUpdate.SC01.debitPin" : "4321",
+
+  "__Test Case__@kycUpdate__2" : "kycUpdate - [SC02] Verify if the user is redirected to EID scan screen by tapping on Update Emirates ID option from Profile details screen",
+  "kycUpdate.SC02.mobileNumber" : "501921232",
+  "kycUpdate.SC02.passcode" : "1234",
+  "kycUpdate.SC02.debitPin" : "4321",
+
+  "__Test Case__@kycUpdate__3" : "kycUpdate - [SC03] Verify if the Expiry banner is displayed for user whose Emirates ID is expiring and tapping on the banner will take the user to Scan EID screen",
+  "kycUpdate.SC03.mobileNumber" : "501921234",
+  "kycUpdate.SC03.passcode" : "1234",
+  "kycUpdate.SC03.debitPin" : "4321",
+
+  "__Test Case__@kycUpdate__4" : "kycUpdate - [SC04] Verify if the Expiry banner is displayed for user whose Emirates ID is expired and tapping on the banner will take the user to Scan EID screen",
+  "kycUpdate.SC04.mobileNumber" : "501921235",
+  "kycUpdate.SC04.passcode" : "1234",
+  "kycUpdate.SC04.debitPin" : "4321",
+
+  "__Test Case__@kycUpdate__5" : "kycUpdate - [SC05] Verify if expiry banner is displayed in family tab for a child whose EID is expiring and tapping on the banner will take the user to Scan EID screen",
+  "kycUpdate.SC05.mobileNumber" : "501921232",
+  "kycUpdate.SC05.passcode" : "1234",
+  "kycUpdate.SC05.debitPin" : "4321",
+  "kycUpdate.SC05.childName" : "EID Expiring",
+
+  "__Test Case__@kycUpdate__6" : "kycUpdate - [SC06] Verify if expiry banner is displayed in family tab for a child whose EID is expired and tapping on the banner will take the user to Scan EID screen",
+  "kycUpdate.SC06.mobileNumber" : "501921232",
+  "kycUpdate.SC06.passcode" : "1234",
+  "kycUpdate.SC06.debitPin" : "4321",
+  "kycUpdate.SC06.childName" : "EID Expired",
+
+  "__Test Case__@kycUpdate__7" : "kycUpdate - [SC07] Verify if Emirates ID details and update option is present in settings screen for a child whose EID status is Valid",
+  "kycUpdate.SC07.mobileNumber" : "501921232",
+  "kycUpdate.SC07.passcode" : "1234",
+  "kycUpdate.SC07.debitPin" : "4321",
+  "kycUpdate.SC07.childName" : "EID Valid",
+
+  "__Test Case__@kycUpdate__8" : "kycUpdate - [SC08] Verify if Emirates ID details and update option is not present in settings screen for a child whose EID status is not Valid",
+  "kycUpdate.SC08.mobileNumber" : "501921232",
+  "kycUpdate.SC08.passcode" : "1234",
+  "kycUpdate.SC08.debitPin" : "4321",
+  "kycUpdate.SC08.childName" : "EID Not Valid",
+
+  "__Test Case__@kycUpdate__9" : "kycUpdate - [SC09] Verify if Emirates ID details and update option is not present in Profile details screen for a user whose EID status is not Valid",
+  "kycUpdate.SC09.mobileNumber" : "501921236",
+  "kycUpdate.SC09.passcode" : "1234",
+  "kycUpdate.SC09.debitPin" : "4321"
+}
